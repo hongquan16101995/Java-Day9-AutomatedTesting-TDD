@@ -12,10 +12,18 @@ public class TestNextDay {
         System.out.println("Enter year: ");
         int year = sc.nextInt();
 
-        NextDayCalculator nextDayCalculator = new NextDayCalculator();
-        if(nextDayCalculator.checkYear(year)) {
-            nextDayCalculator.display(day, month, year);
+//        NextDayCalculator nextDayCalculator = new NextDayCalculator();
+//        System.out.println("The next day : ");
+//        if(nextDayCalculator.checkYear(year)) {
+//            nextDayCalculator.display(day, month, year);
+//        }else
+//            nextDayCalculator.display1(day, month, year);
+
+        NextDayCalculator2 nextDayCalculator2 = new NextDayCalculator2();
+        System.out.println("The next day : ");
+        if(nextDayCalculator2.checkYear(year)) {
+            nextDayCalculator2.display(day, month, year);
         }else
-            nextDayCalculator.display1(day, month, year);
+            nextDayCalculator2.display1(day, month, year);
     }
 }
