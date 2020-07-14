@@ -16,7 +16,6 @@ public class NextDayCalculator2 {
 
     public boolean checkYear(int year) {
         boolean isLeapYear = false;
-
         boolean isDivisionBy4 = year % 4 == 0;
         if (isDivisionBy4) {
             boolean isDivisionBy100 = year % 100 == 0;
