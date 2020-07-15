@@ -12,7 +12,7 @@ class AbsoluteNumberCalculatorTest {
         int expected = 0;
 
         int result = AbsoluteNumberCalculator.findAbsolute(number);
-        assertEquals(expected, number);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -21,7 +21,7 @@ class AbsoluteNumberCalculatorTest {
         int expected = 1;
 
         int result = AbsoluteNumberCalculator.findAbsolute(number);
-        assertEquals(expected, number);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -30,6 +30,6 @@ class AbsoluteNumberCalculatorTest {
         int expected = 1;
 
         int result = AbsoluteNumberCalculator.findAbsolute(number);
-        assertEquals(expected, number);
+        assertEquals(expected, result);
     }
 }
