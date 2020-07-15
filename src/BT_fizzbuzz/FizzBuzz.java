@@ -1,21 +1,27 @@
 package BT_fizzbuzz;
 
 public class FizzBuzz {
-    private String a; //hàng đơn vị
-    private String b; //hàng chục
+    private static String a; //hàng đơn vị
+    private static String b; //hàng chục
+    private static String c;
+    private int num;
+
+    public FizzBuzz(int num) {
+        this.num = num;
+    }
 
     public FizzBuzz() {
     }
 
-    public String getA() {
-        return a;
+    public static String getA(int num) {
+        return getNum(num%10);
     }
 
-    public String getB() {
-        return b;
+    public static String getB(int num) {
+        return getNum2((num-(num%10))/10);
     }
 
-    public void getNum(int num) {
+    public static String getNum(int num) {
         switch (num) {
             case 1:
                 a = "one";
@@ -77,9 +83,10 @@ public class FizzBuzz {
             default:
                 a = "";
         }
+        return a;
     }
 
-    public void getNum2(int num){
+    public static String getNum2(int num){
         switch (num){
             case 2:
                 b = "twenty";
@@ -108,5 +115,22 @@ public class FizzBuzz {
             case 1:
                 b = "";
         }
+        return b;
+    }
+
+    public static String getResult(int num) {
+        if(num%15 == 0){
+            c = "FizzBuzz";
+        }else if(num%5 == 0){
+            c = "Buzz";
+        }else if(num%3 == 0){
+            c = "Fizz";
+        }else if(num >=1 && num <=20) {
+            c = getA(num);
+        }else if(num == 100){
+            c = "One hundred";
+        }else
+            c = (getB(num) + " - " + getA(num));
+        return c;
     }
 }
