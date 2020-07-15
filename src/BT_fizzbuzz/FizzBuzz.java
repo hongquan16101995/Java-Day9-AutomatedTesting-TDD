@@ -121,9 +121,9 @@ public class FizzBuzz {
     public static String getResult(int num) {
         if(num%15 == 0){
             c = "FizzBuzz";
-        }else if(num%5 == 0){
+        }else if(num%5 == 0 || (num-(num%10))/10 == 5){
             c = "Buzz";
-        }else if(num%3 == 0){
+        }else if(num%3 == 0 || num%10 == 3){
             c = "Fizz";
         }else if(num >=1 && num <=20) {
             c = getA(num);
