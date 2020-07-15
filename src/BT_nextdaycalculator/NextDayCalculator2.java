@@ -54,7 +54,9 @@ public class NextDayCalculator2 {
     }
 
     private void setDayOfMonth(int day, int month, int year) {
-        if (day == 30) {
+        if(day == 31 && month == 12) {
+            System.out.println("Day : " + 1 + " , month : " + 1 + " , year : " + (year+1));
+        }else if (day == 30) {
             boolean month30day = (month == 4 || month == 6 || month == 9 || month == 11);
             if (month30day) {
                 System.out.println("Day : " + 1 + " , month : " + (month + 1) + " , year : " + year);

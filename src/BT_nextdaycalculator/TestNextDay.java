@@ -22,9 +22,7 @@ public class TestNextDay {
 
         NextDayCalculator2 nextDayCalculator2 = new NextDayCalculator2();
         System.out.println("The next day : ");
-        if(day == 31 && month == 12){
-            System.out.println("Day : " + 1 + " , month : " + 1 + " , year : " + (year+1));
-        }else if(nextDayCalculator2.checkYear(year)) {
+        if(nextDayCalculator2.checkYear(year)) {
             nextDayCalculator2.display(day, month, year);
         }else
             nextDayCalculator2.display1(day, month, year);

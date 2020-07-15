@@ -59,7 +59,9 @@ public class NextDayCalculator3 {
 
     public static int[] setDayOfMonth(int day, int month, int year) {
         int[] arr = new int[3];
-        if (day == 30) {
+        if(day == 31 && month == 12) {
+            return arr = new  int[]{1, 1, year+1};
+        }else if (day == 30) {
             boolean month30day = (month == 4 || month == 6 || month == 9 || month == 11);
             if (month30day) {
                 return arr = new int[]{1, month+1, year};
