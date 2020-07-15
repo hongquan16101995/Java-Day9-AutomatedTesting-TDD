@@ -29,4 +29,16 @@ class FizzBuzzTest {
         String result = FizzBuzz.getResult(75);
         assertEquals("FizzBuzz", result);
     }
+
+    @Test
+    void getResult4() {
+        String result = FizzBuzz.getResult(51);
+        assertEquals("Buzz", result);
+    }
+
+    @Test
+    void getResult5() {
+        String result = FizzBuzz.getResult(83);
+        assertEquals("Fizz", result);
+    }
 }
